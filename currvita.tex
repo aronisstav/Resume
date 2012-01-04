@@ -20,7 +20,7 @@
 \usepackage{eurosym}
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011}
 
-\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3%
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3%
 \vspace{0.5em}}
 
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
@@ -37,19 +37,37 @@
 
 \NewWorkExperience{email}{\href{mailto:aronisstav@gmail.com}{aronisstav@gmail.com}}{}
 
-\NewWorkExperience{phone}{+30 6972232377}{}
+\NewWorkExperience{phone}{+30 6972232377, +46 729429569}{}
 \vspace{2em}
 
 \noindent\spacedlowsmallcaps{Goal}
 \vspace{1em}
 
-\Description{Gain some work experience through a summer internship.}
+\Description{Research programming languages}
 \vspace{2em}
 
 \noindent\spacedlowsmallcaps{Work Experience}
 \vspace{1em}
 
-\NewWorkExperience{2010-11}{Assistant at Software Laboratory,}{NTUA}
+\NewWorkExperience{Oct-Dec 2011}{Research Assistant at CS Division,}{UU}
+
+\Description{\MarginDate{Uppsala University}Continued support for Dialyzer with
+  improvements in the static analysis algorithm. Collaboration on the
+  development of a tool to explain Dialyzer's warnings. Teaching Assistant on
+  Compiler Design I course.\\ Reference: Prof.~Kostis \textsc{Sagonas}}
+
+\vspace{1em}
+
+\NewWorkExperience{Jul-Sep 2011}{Summer Intern, R\&D Department}{Klarna}
+
+\Description{\MarginDate{Klarna}Cleaned up type definitions, function
+  specifications and documentation in codebase, automatized use of Dialyzer,
+  developed a tool for complexity analysis of Erlang code and wrote several
+  scripts for statistical reports. \\ Reference: Erik \textsc{Stenman}}
+
+\vspace{1em}
+
+\NewWorkExperience{Feb-Jun 2011}{Assistant at Software Laboratory,}{NTUA}
 
 \Description{\MarginDate{NTUA}Worked on various bug fixes and improvements on
   Dialyzer, HiPE and other OTP applications, including a new infrastructure for
@@ -58,7 +76,24 @@
   in SoftLab, which updates regularly with results from about 150 Erlang
   applications.\\ Reference: Prof.~Kostis \textsc{Sagonas}}
 
-\vspace{2em}
+\vspace{1em}
+
+\vspace{1em}
+\spacedlowsmallcaps{Publications}
+\vspace{1em}
+
+\NewWorkExperience{Erlang '11}{Typed callbacks for more robust behaviours}{}
+
+\Description{\MarginDate{Erlang '11} In this paper, we propose a small extension
+  to the language of function specifications of Erlang to allow the formal
+  definition of the behaviours' callback API. We have implemented this extension
+  on the development branch of Erlang/OTP and provide evidence of how it can be
+  leveraged by static analysis tools such as Dialyzer to detect behaviour
+  misuses.\\ Authors: Stavros \textsc{Aronis}, ~Kostis \textsc{Sagonas}}
+
+\vspace{1em}
+
+\vspace{1em}
 \spacedlowsmallcaps{Education}
 \vspace{1em}
 
@@ -69,7 +104,7 @@
   discrepancy detection in programs using static analysis'' \newline Advisor:
   Prof.~Kostis \textsc{Sagonas}}
 
-\vspace{2em}
+\pagebreak
 
 \spacedlowsmallcaps{Computer Skills}
 \vspace{1em}
@@ -111,6 +146,10 @@
   knowledge (CEFR B2)}
 
 \MarginDate{Languages}
+
+\vspace{0.5em}
+\Description{\parbox{\langbox}{\textsc{Swedish}}\ \ $\cdotp$\ \ \ Beginner
+  knowledge (CEFR A1)}
 
 \vspace{0.5em}
 \Description{\parbox{\langbox}{\textsc{Greek}}\ \ $\cdotp$\ \ \ Mother Tongue}
