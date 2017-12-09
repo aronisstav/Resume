@@ -1,12 +1,14 @@
 % Original is here: http://www.cv-templates.info/2009/10/classicthesis-currvita-latex-cv-template/
 
 \documentclass{scrartcl}
-\reversemarginpar
-\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
-%\usepackage[latin1]{inputenc}
-%\usepackage[T1]{fontenc}
+
+\usepackage[swedish,greek,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 \usepackage[LabelsAligned]{currvita}
 \usepackage[nochapters]{classicthesis}
+
 \usepackage{url}
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
 \renewcommand{\cvlistheadingfont}{\large}
@@ -20,10 +22,14 @@
 \usepackage{eurosym}
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011}
 
-\newcommand{\Section}[1]{\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
+\newcommand{\Section}[1]{\noindent{\Large\spacedlowsmallcaps{#1}}\vspace{1em}}
 \newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3%
 \vspace{0.5em}}
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
+
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+
 \newcommand{\Sep}{\vspace{1.5em}}
 \newcommand{\SmSep}{\vspace{0.5em}}
 
@@ -116,6 +122,11 @@ Testing Concurrent and Parallel Software}{}
 \clearpage
 
 \Section{Scientific Publications}
+
+\Description{%
+  Optimal Dynamic Partial Order Reduction with Observers,
+  \MarginDate{(under review)} \\
+  \emph{ S.Aronis, B.Jonsson, M.Lång, K.Sagonas}}
 
 \Description{%
   Source Sets: A Foundation for Optimal Dynamic Partial Order Reduction,
