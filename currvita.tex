@@ -20,20 +20,22 @@
 \usepackage{eurosym}
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011}
 
+\newcommand{\Section}[1]{\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
 \newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3%
 \vspace{0.5em}}
-
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
-\newcommand{\Sep}{\vspace{2em}}
+\newcommand{\Sep}{\vspace{1.5em}}
+\newcommand{\SmSep}{\vspace{0.5em}}
+
 \begin{document}
 \thispagestyle{empty}
-\begin{cv}{\spacedallcaps{Stavros Aronis}}
-\vspace{1.5em}
+\begin{cv}{\spacedallcaps{Stavros Aronis (CV)}}
 
-\noindent\spacedlowsmallcaps{Personal Data}
-\vspace{0.5em}
+\Sep
 
-\NewWorkExperience{}{\textit{Born in Greece,}}{20 November 1987}
+\Section{Personal Data}
+
+\NewWorkExperience{}{\textit{Born in Greece,}}{November $20^{th}$, 1987}
 
 \NewWorkExperience{email}{\href{mailto:aronisstav@gmail.com}{aronisstav@gmail.com}}{}
 
@@ -41,155 +43,176 @@
 
 \NewWorkExperience{phone}{+46 729429569, +30 6972232377}{}
 
-\vspace{2em}
+\Sep
 
-\noindent\spacedlowsmallcaps{Employment record}
-\vspace{1em}
+\Section{Employment Record}
 
-\NewWorkExperience{Jan 2012 - \\ Sep 2017}{\MarginDate{Uppsala University} PhD student, CS
-  Division,}{UU}
+\NewWorkExperience{Jan 2012 - \\ Sep 2017}{\MarginDate{Uppsala University} PhD student, CS Division,}{UU}
 
 \NewWorkExperience{Oct-Dec 2011}{Research Assistant, CS Division,}{UU}
 
-\vspace{1em}
+\SmSep
 
 \NewWorkExperience{Jul-Sep 2011}{\MarginDate{Klarna} Summer Intern, R\&D
   Department,}{Klarna}
 
-\vspace{1em}
+\SmSep
 
 \NewWorkExperience{Feb-Jun 2011}{\MarginDate{NTUA} Assistant, Software
   Laboratory,}{NTUA}
 
-\vspace{2em}
-\noindent\spacedlowsmallcaps{Software Projects}
-\vspace{1em}
+\Sep
 
-\Description{\MarginDate{Concuerror}A model checking tool for Erlang programs.
-  \url{http://parapluu.github.io/Concuerror}\newline
+\Section{Software Projects}
+
+\Description{\MarginDate{Concuerror}A stateless model checking tool for Erlang programs.
+  \url{http://parapluu.github.io/Concuerror} \\
   \emph{Role: Main developer}}
 
-\Description{\MarginDate{Dialyzer}A static analysis tool that identifies software discrepancies in Erlang programs.
-  \url{http://erlang.org/doc/man/dialyzer.html}\newline
+\Description{\MarginDate{Dialyzer}A static analysis tool for identifying software discrepancies in Erlang programs.
+  \url{http://erlang.org/doc/man/dialyzer.html} \\
   \emph{Role: Maintainer, Developer of the parallel version}}
 
-\vspace{2em}
-\spacedlowsmallcaps{Teaching Experience}
-\vspace{1em}
+\Sep
 
-\NewWorkExperience{2015-2016}{\MarginDate{Uppsala University}
-Testing Concurrent and Parallel Software}{}
-\Description{\newline
-  Responsibilities: Assignments}
-\vspace{0.5em}
-\NewWorkExperience{2012-2014}{Advanced Functional Programming}{}
-\Description{\newline
-  Responsibilities: Labs, Assignments \& Projects}
-\vspace{0.5em}
-\NewWorkExperience{2011-2016}{Compiler Design I}{}
-\Description{\newline
-  Responsibilities: Lessons, Assignments \& Examination}
+\Section{Education}
 
-\vspace{2em}
-\spacedlowsmallcaps{Education}
-\vspace{1em}
-
-\NewWorkExperience{Jan 2018 \\ (planned)}{Uppsala University,}{Sweden}
+\NewWorkExperience{Feb 2018 \\ (planned)}{Uppsala University,}{Sweden}
 \Description{ \MarginDate{Ph.D. in Computer Science}\newline
-  Department of Information Technology\newline
-  Thesis: ``Improving Dynamic Partial Order Reduction''\newline
-  Advisors: K.Sagonas, B.Jonsson
+  School: Department of Information Technology\newline
+  Thesis: ``Effective Techniques for Stateless Model Checking''\newline
+  Opponent: P. Godefroid (Microsoft Research)\newline
+  Advisors: K. Sagonas, B. Jonsson
 }
 
-\vspace{1em}
+\SmSep
+\SmSep
 
 \NewWorkExperience{Feb 2011}{National Technical University of Athens,}{Greece}
 \Description{ \MarginDate{M.Sc. Electrical and Computer Engineering}
   GPA: 9.2 \textit{Top 10\% of class}\newline
   School: Electrical and Computer Enginneering\newline
-  Thesis: ``Techniques for improving effectiveness of
-  discrepancy detection in programs using static analysis''\newline
+  Thesis: ``Techniques for Improving the Effectiveness of
+  Discrepancy Detection in Programs using Static Analysis''\newline
   Advisor: K. Sagonas}
+
+\Sep
+
+\Section{Teaching Experience}
+
+\NewWorkExperience{2015-2016}{\MarginDate{Uppsala University}
+Testing Concurrent and Parallel Software}{}
+\Description{\\
+  Responsibilities: Assignments}
+\vspace{1em}
+\NewWorkExperience{2012-2014}{Advanced Functional Programming}{}
+\Description{\\
+  Responsibilities: Labs, Assignments \& Projects}
+\vspace{1em}
+\NewWorkExperience{2011-2016}{Compiler Design I}{}
+\Description{\newline
+  Responsibilities: Lessons, Assignments \& Examination}
 
 \clearpage
 
-\spacedlowsmallcaps{Publications}
-\vspace{1em}
+\Section{Scientific Publications}
 
-\Description{
-  \MarginDate{J.ACM 64(4)} Source Sets: A Foundation for Optimal Dynamic Partial Order Reduction,\newline
-  \emph{P.A.Abdulla, S.Aronis, B.Jonsson, K.Sagonas}}
+\Description{%
+  Source Sets: A Foundation for Optimal Dynamic Partial Order Reduction,
+  \MarginDate{J.ACM 64(4)} \\
+  \emph{ P.A.Abdulla, S.Aronis, B.Jonsson, K.Sagonas}}
 
-\Description{
-  \MarginDate{KimFest '17} Comparing Source Sets and Persistent Sets for Partial Order Reduction,\newline
-  \emph{P.A.Abdulla, S.Aronis, B.Jonsson, K.Sagonas}}
+\Description{%
+  Comparing Source Sets and Persistent Sets for Partial Order Reduction,
+  \MarginDate{KimFest '17} \\
+  \emph{ P.A.Abdulla, S.Aronis, B.Jonsson, K.Sagonas}}
 
-\Description{
-  \MarginDate{Erlang '17} The shared-memory interferences of Erlang/OTP built-ins,\newline
-  \emph{S.Aronis, K.Sagonas}}
+\Description{%
+  The shared-memory interferences of Erlang/OTP built-ins,
+  \MarginDate{Erlang '17} \\
+  \emph{ S.Aronis, K.Sagonas}}
 
-\Description{
-  \MarginDate{IFM '17} Testing and Verifying Chain Repair Methods for Corfu Using Stateless Model Checking,\newline
-  \emph{S.Aronis, S.Lystig Fritchie, K.Sagonas}}
+\Description{%
+  Testing and Verifying Chain Repair Methods for Corfu Using \MarginDate{IFM '17}
+  Stateless Model Checking,
+  \\
+  \emph{ S.Aronis, S.Lystig Fritchie, K.Sagonas}}
 
-\Description{
-  \MarginDate{TACAS '15} Stateless Model Checking for TSO and PSO,\newline
-  \emph{P.A.Abdulla, S.Aronis, M.F.Atig, B.Jonsson, C.Leonardsson, K.Sagonas}}
+\Description{%
+  Stateless Model Checking for TSO and PSO,
+  \MarginDate{TACAS '15} \\
+  \emph{ P.A.Abdulla, S.Aronis, M.F.Atig, B.Jonsson, C.Leonardsson, K.Sagonas}}
 
-\Description{
-  \MarginDate{POPL '14} Optimal Dynamic Partial Order Reduction,\newline
-  \emph{P.A.Abdulla, S.Aronis, B.Jonsson, K.Sagonas}}
+\Description{%
+  Optimal Dynamic Partial Order Reduction,
+  \MarginDate{POPL '14} \\
+  \emph{ P.A.Abdulla, S.Aronis, B.Jonsson, K.Sagonas}}
 
-\Description{
-  \MarginDate{TFP '12} On Using Erlang for Parallelization -
-  Experience from Parallelizing Dialyzer,\newline
-  \emph{S.Aronis, K.Sagonas}}
+\Description{%
+  On Using Erlang for Parallelization - Experience from Parallelizing Dialyzer,
+  \MarginDate{TFP '12} \\
+  \emph{ S.Aronis, K.Sagonas}}
 
-\Description{
-  \MarginDate{Erlang '12} A scalability benchmark suite for
-  Erlang/OTP,\newline
-  \emph{S.Aronis, N. Papaspyrou, K. Roukounaki, K.Sagonas,
-    Y. Tsiouris, I. Venetis}}
+\Description{%
+  A scalability benchmark suite for Erlang/OTP,
+  \MarginDate{Erlang '12} \\
+  \emph{ S.Aronis, N. Papaspyrou, K. Roukounaki, K.Sagonas, Y. Tsiouris, I. Venetis}}
 
-\Description{
-  \MarginDate{Erlang '11} Typed callbacks for more robust behaviours,\newline
-  \emph{S.Aronis, K.Sagonas}}
+\Description{%
+  Typed callbacks for more robust behaviours,
+  \MarginDate{Erlang '11} \\
+  \emph{ S.Aronis, K.Sagonas}}
 
-\vspace{2em}
-\spacedlowsmallcaps{Computer Skills}
-\vspace{1em}
+\Sep
+
+\Section{Computer Skills}
 
 \Description{Erlang, Bash, HTML/CSS, C, Java, Haskell}
-\MarginDate{Programming Languages}
+\MarginDate{Prog. Languages}
 
-\vspace{2em}
-\Description{Linux: Debian, Ubuntu.}
+\SmSep
+
+\Description{Debian, Ubuntu}
 \MarginDate{Operating Systems}
 
-\vspace{1em}
-\Description{Git, LaTeX, Github, Travis}
+\SmSep
+
+\Description{Git, LaTeX, Github, Travis, Emacs, Xmonad}
 \MarginDate{Other tools}
 
-\vspace{2em}
-\spacedlowsmallcaps{Other information}
-\vspace{1em}
+\Sep
 
-\Description{Sept. 2010 (NTUA) Award from the State Scholarships Foundation for ranking
-  10th in class of 300 students in academic year 2008-2009} \MarginDate{Awards}
+\Section{Other Information}
 
-\vspace{0.5em}
+\Description{Sep 2017 - Feb 2018 --- \emph{PhD Student Representative}
+  \MarginDate{Elected Roles}
+ \\
+  UPMARC board, Department of Information Technology, Uppsala University}
+
+\SmSep
+
+\Description{Sep 2016 - Aug 2017 --- \emph{Treasurer} \\
+  Wijkmanska Blecket, Uplands Nation Student Orchestra, Uppsala}
+
+\Sep
+
+\Description{Sept. 2010 (NTUA) \MarginDate{Scholarship Awards}
+  Award from the State Scholarships Foundation for ranking
+  10th in class of 300 students in academic year 2008-2009}
+
+\SmSep
 
 \Description{Sept. 2009 (NTUA) Award from the State Scholarships Foundation for ranking
   9th in class of 300 students in academic year 2007-2008}
 
-\vspace{2em}
+\Sep
 \newlength{\langbox}
 
 \settowidth{\langbox}{English}
 \Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Fluent (CEFR
   C2)}
 
-\MarginDate{Languages}
+\MarginDate{Language Skills}
 
 \vspace{0.5em}
 \Description{\parbox{\langbox}{\textsc{Swedish}}\ \ $\cdotp$\ \ \ Intermediate
@@ -202,14 +225,13 @@ Testing Concurrent and Parallel Software}{}
 \vspace{0.5em}
 \Description{\parbox{\langbox}{\textsc{Greek}}\ \ $\cdotp$\ \ \ Mother Tongue}
 
-\vspace{2em}
+\Sep
 
-\Description{\MarginDate{Interests}
-  Accordion\ \ $\cdotp$\ \
+\Description{Accordion\ \ $\cdotp$\ \
   Programming Contests\ \ $\cdotp$\ \
   Teaching\ \ $\cdotp$\ \
   Testing\ \ $\cdotp$\ \
-  Tooling}
+  Tooling}\MarginDate{Interests}
 
 \end{cv}
 \end{document}
